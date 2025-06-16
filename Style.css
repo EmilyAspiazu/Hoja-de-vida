@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fde4ec, #f3e5f5);
+  color: #4a4a4a;
+  padding: 40px 20px;
+}
+
+/* Contenedor principal */
+.cv-container {
+  max-width: 880px;
+  margin: auto;
+  background: #fff0f6;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 45px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elemento decorativo redondo */
+.cv-container::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  background: #f8bbd0;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #f48fb1;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+}
+
+.titulo-principal {
+  font-size: 2.8rem;
+  color: #e91e63;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Nombre */
+header h2 {
+  color: #9c27b0;
+  font-size: 1.8rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #ce93d8;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* Información personal */
+.nacimiento,
+.contacto {
+  font-size: 1rem;
+  margin: 8px 0;
+  display: block;
+}
+
+.nacimiento::before {
+  content: "🎂 ";
+}
+
+.contacto.email::before {
+  content: "📧 ";
+}
+
+.contacto.telefono::before {
+  content: "📞 ";
+}
+
+/* Navegación */
+.navegacion {
+  margin-top: 30px;
+}
+
+.bloque {
+  background-color: #fce4ec;
+  border-left: 6px solid #ba68c8;
+  padding: 20px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.bloque:hover {
+  transform: translateY(-4px);
+  background-color: #f8bbd0;
+}
+
+.bloque a {
+  display: inline-block;
+  text-align: center;
+  background: #e1bee7;
+  color: #4a148c;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.bloque a:hover {
+  background-color: #ce93d8;
+  color: #ffffff;
+}
+
+/* Títulos de sección */
+h2 {
+  color: #ab47bc;
+  font-size: 1.6rem;
+  margin: 30px 0 15px;
+  border-bottom: 3px dashed #ce93d8;
+  padding-bottom: 8px;
+}
+
+h3 {
+  color: #7b1fa2;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+/* Párrafos */
+p {
+  font-size: 1.05rem;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* Enlace para volver */
+a.volver {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: none;
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+a.volver:hover {
+  background-color: #d1c4e9;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .cv-container {
+    padding: 25px 20px;
+  }
+
+  .foto-perfil {
+    width: 90px;
+    height: 90px;
+  }
+
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+
+  header h2 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .bloque {
+    font-size: 0.95rem;
+  }
+}
